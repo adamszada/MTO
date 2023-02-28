@@ -1,20 +1,20 @@
-totafsdfsf #k fdsfsdf
+Prosty #k jest pierwszy
 test
-totafsd#k fdsfsdf fdfjs
-test2
-jfldjfldk # wynik
-test3
-fjdfsfds # k alal
+Prosty #k jest drugi ale oczekuje malych
+TEST2
+Trzeci #k jest trzeci i jest mixem
+tEsT3
+Mam spacje wiec # k nie robi nic
 test4
-djfjkldsjf #k jjjjjj fsfjdljfdlsj flj ldfj
+Nie mam nic i nie robie nic
 test5
-gjjkdsljflds #k jdlkfjdslf
+Test6 ##k i podwojny hash
 test6
-fjdslkfjdl #k tttttt
+Test numer k bez hasha
 test7
-fjdlsjfkl #k oooolll
+Osmy test jest pusty
 test8
-rwrewrew #k fjdslkjfdl
+Dziewiec i podwojny k #kk
 test9
-fjdlskjfldjflj #k rewrewrew
+Dziesiaty test pusty
 test10
