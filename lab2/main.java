@@ -28,7 +28,6 @@ class lab2 {
 		int len = matcher.group(1) == null ? param.length() : Math.min(Integer.parseInt(matcher.group(1).substring(1)), param.length());
 		param = swapCase(param);
 		System.out.println(format_string.replace(tmp_str, param.substring(0, len)));
-		System.out.println("");
 	}
 
 
