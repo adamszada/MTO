@@ -1,6 +1,6 @@
 
 import java.io.*;
-import java.utils.regex.*
+import java.util.regex.*;
 
 class lab3 {
 	public static void my_printf(String format_string, String param){
@@ -10,7 +10,11 @@ class lab3 {
 			System.out.println(format_string);
 			return;
 		}
-		
+		String replace = matcher.group();
+		if(matcher.group(1)!=null)
+			System.out.println(matcher.group(1));
+		if(matcher.group(2)!=null)
+			System.out.println(matcher.group(2));
 	}
 
 
