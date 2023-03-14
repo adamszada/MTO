@@ -20,8 +20,8 @@ class lab3 {
 		Pattern pattern = Pattern.compile("#([1-9]\\d*)?(\\.\\d+)?k");
 		Matcher matcher = pattern.matcher(format_string);
 		if(!matcher.find()){
-		System.out.println(format_string);
-		return;
+			System.out.println(format_string);
+			return;
 		}
 		String replacement = matcher.group();
 		param = swapCase(param);
