@@ -10,11 +10,19 @@ class lab3 {
 			System.out.println(format_string);
 			return;
 		}
-		String replace = matcher.group();
-		if(matcher.group(1)!=null)
+		
+		String replacement = matcher.group();
+		if(matcher.group(1)!=null){
 			System.out.println(matcher.group(1));
-		if(matcher.group(2)!=null)
+			param = String.format("%1$"+Integer.valueOf(matcher.group(1))+ "s", param);
+		}
+		if(matcher.group(2)!=null){
 			System.out.println(matcher.group(2));
+			param = param.substring(0, Math.min(Integer.parseInt(matcher.group(2).substring(1)),param.length()));
+		}
+		
+		System.out.println(format_string.replaceAll(replacement, param));
+		
 	}
 
 
