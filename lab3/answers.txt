@@ -1,0 +1,11 @@
+Test 1 nie robi nic
+Test 2 robi to co PIERWSZY
+Test3 # k
+Ala ma ko
+Ala ma .  KOT
+.tEsT.
+Test TEST
+.   ko.
+k # 
+# 3 k
+Test     

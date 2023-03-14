@@ -20,19 +20,15 @@ class lab3 {
 		Pattern pattern = Pattern.compile("#([1-9]\\d*)?(\\.\\d+)?k");
 		Matcher matcher = pattern.matcher(format_string);
 		if(!matcher.find()){
-			System.out.println(format_string);
-			return;
+		System.out.println(format_string);
+		return;
 		}
-
 		String replacement = matcher.group();
 		param = swapCase(param);
-		if(matcher.group(1)!=null){
-			param = String.format("%1$"+Integer.valueOf(matcher.group(1))+ "s", param);
-		}
-		if(matcher.group(2)!=null){
-			param = param.substring(0, Math.min(Integer.parseInt(matcher.group(2).substring(1)),param.length()));
-		}
-		
+
+		param = matcher.group(2) != null ? param.substring(0, Math.min(Integer.parseInt(matcher.group(2).substring(1)),param.length())):param;
+		param = matcher.group(1) != null ? String.format("%1$"+Integer.valueOf(matcher.group(1))+ "s", param) : param;
+
 		System.out.println(format_string.replaceAll(replacement, param));
 		
 	}
