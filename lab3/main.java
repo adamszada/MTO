@@ -1,18 +1,19 @@
 
 import java.io.*;
+import java.utils.regex.*
 
-class lab0 {
+class lab3 {
 	public static void my_printf(String format_string, String param){
-		for(int i=0;i<format_string.length();i++){
-			if((format_string.charAt(i) == '#') && (format_string.charAt(i+1) == 'k')){
-				System.out.print(param);
-				i++;
-			}else{
-				System.out.print(format_string.charAt(i));
-			}
+		Pattern pattern = Pattern.compile("#([1-9]\\d*)?(\\.\\d+)?k");
+		Matcher matcher = pattern.matcher(format_string);
+		if(!matcher.find()){
+			System.out.println(format_string);
+			return;
 		}
-		System.out.println("");
+		
 	}
+
+
 	public static void main(String[] args) throws IOException {
 		//System.out.println("Hello, World!"); 
 		BufferedReader bufferReader=new BufferedReader(new InputStreamReader(System.in));
