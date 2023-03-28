@@ -1,0 +1,20 @@
+TEST1 #g
+1234
+TEST2 # g
+753
+TEST3 #.g
+613
+TEST4 #gg#
+741
+TEST5 #gg
+-9237
+TEST6 #g #g #g
+5317
+TEST7 #2g
+85
+TEST8 ##gg
+24
+TEST9 g#
+367
+TEST10 #gABC
+7412
