@@ -11,6 +11,13 @@ class lab4 {
 			return;
 		}
 		String replacement = matcher.group();
+		int tmpNumber = 0;
+		try{
+			tmpNumber = Integer.parseInt(param);
+		} catch (NumberFormatException e) {
+			System.out.println(format_string);
+			return;
+		}
 		System.out.println(format_string.replaceAll(replacement, param));
 	}
 
