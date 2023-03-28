@@ -1,8 +1,15 @@
 
 import java.io.*;
+import java.util.regex.*;
 
 class lab4 {
 	public static void my_printf(String format_string, String param){
+		Pattern pattern = Pattern.compile("#g");
+		Matcher matcher = pattern.matcher(format_string);
+		if(!matcher.find()){
+			System.out.println(format_string);
+			return;
+		}
 		System.out.print(format_string);
 	}
 
