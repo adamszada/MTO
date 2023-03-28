@@ -10,7 +10,8 @@ class lab4 {
 			System.out.println(format_string);
 			return;
 		}
-		System.out.print(format_string);
+		String replacement = matcher.group();
+		System.out.println(format_string.replaceAll(replacement, param));
 	}
 
 	
