@@ -17,8 +17,8 @@ class lab5 {
 			if (tmp[j] == -1)
 				tmp[j] = 9;
 		}
-
-		sb.insert(0," ".repeat(size));
+		if(size>0)
+			sb.insert(0," ".repeat(size));
 		for (int digit : tmp)
 			sb.append(digit);
 		return sb.toString();
