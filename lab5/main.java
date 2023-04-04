@@ -32,7 +32,6 @@ class lab5 {
 			return;
 		}
 		String replacement = matcher.group(1);
-		System.out.println(replacement);
 		int tmpNumber = 0;
 		try{
 			tmpNumber = Integer.parseInt(replacement);
