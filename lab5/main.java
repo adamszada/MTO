@@ -10,6 +10,16 @@ class lab5 {
 			System.out.println(format_string);
 			return;
 		}
+		String replacement = matcher.group(1);
+		System.out.println(replacement);
+		int tmpNumber = 0;
+		try{
+			tmpNumber = Integer.parseInt(replacement);
+		} catch (NumberFormatException e) {
+			System.out.println(format_string);
+			return;
+		}
+		System.out.println(format_string.replaceFirst(matcher.group(0), replacement));
 	}
 
 
