@@ -12,6 +12,24 @@ class lab6 {
 			return;
 		}
 		
+		String number = matcher.group(1);
+		int num = 0;
+		try {
+			num = Integer.parseInt(number);
+		} catch (NumberFormatException e) {
+			System.out.println(formatString);
+			return;
+		}
+		int val = 0;
+		
+		try {
+			val = Integer.parseInt(param);
+		} catch (NumberFormatException e) {
+			System.out.println(formatString);
+			return;
+		}
+
+	
 	}
 
 
