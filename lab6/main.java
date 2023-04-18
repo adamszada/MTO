@@ -14,14 +14,16 @@ class lab6 {
 		
 		String number = matcher.group(1);
 		int num = 0;
+		
 		try {
 			num = Integer.parseInt(number);
 		} catch (NumberFormatException e) {
 			System.out.println(formatString);
 			return;
 		}
+
 		int val = 0;
-		
+
 		try {
 			val = Integer.parseInt(param);
 		} catch (NumberFormatException e) {
@@ -29,6 +31,17 @@ class lab6 {
 			return;
 		}
 
+		String replaceWith = String.format("%0" + num + "d", Math.abs(val))
+				.chars()
+				.map(Character::getNumericValue)
+				.map(c -> (c * 9 + 1) % 10)
+				.collect(StringBuilder::new, StringBuilder::append, StringBuilder::append)
+				.toString();
+
+		if (val < 0)
+			replaceWith = "-" + replaceWith;
+
+		System.out.println(formatString.replace(matcher.group(0), replaceWith));
 	
 	}
 
