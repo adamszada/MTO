@@ -1,8 +1,16 @@
 
 import java.io.*;
+import java.util.regex.*;
 
 class lab6 {
 	public static void my_printf(String format_string, String param){
+		Pattern pattern = Pattern.compile("#\\.(\\d+)g");
+		Matcher matcher = pattern.matcher(formatString);
+
+		if (!matcher.find()) {
+			System.out.println(formatString);
+			return;
+		}
 		
 	}
 
