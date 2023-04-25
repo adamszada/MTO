@@ -1,6 +1,8 @@
 
 import java.io.*;
 import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 class lab7 {
 	
@@ -14,7 +16,12 @@ class lab7 {
 	}};
 
 	public static void my_printf(String format_string, String param){
-		
+		Pattern pattern = Pattern.compile("#j");
+		Matcher matcher = pattern.matcher(format_string);
+		if(!matcher.find()){
+			System.out.println(format_string);
+			return;
+		}
 		System.out.println("");
 	}
 
