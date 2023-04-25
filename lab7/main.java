@@ -22,7 +22,19 @@ class lab7 {
 			System.out.println(format_string);
 			return;
 		}
-		System.out.println("");
+		long tmpNumber;
+		try{
+			tmpNumber = Long.parseLong(param);
+		} catch (NumberFormatException e) {
+			System.out.println(format_string);
+			return;
+		}
+		String replacement = Long.toHexString(tmpNumber);
+		for (char k : replacements.keySet()) {
+			replacement = replacement.replace(k, replacements.get(k));
+		}
+
+		System.out.println(format_string.replace(matcher.group(0), replacement));
 	}
 
 	public static void main(String[] args) throws IOException {
