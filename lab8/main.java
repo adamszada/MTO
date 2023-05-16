@@ -15,24 +15,28 @@ class lab8 {
 	}};
 
 	public static void my_printf(String format_string, String param){
-		Pattern pattern = Pattern.compile("#j");
+		Pattern pattern = Pattern.compile("#\\.(\\d+)j");
 		Matcher matcher = pattern.matcher(format_string);
 		if(!matcher.find()){
 			System.out.println(format_string);
 			return;
 		}
+		int numberOfZeros = 0;
 		long tmpNumber;
 		try{
 			tmpNumber = Long.parseLong(param);
+			numberOfZeros = Integer.parseInt(matcher.group(1));
 		} catch (NumberFormatException e) {
 			System.out.println(format_string);
 			return;
 		}
 		String replacement = Long.toHexString(tmpNumber);
+		numberOfZeros = numberOfZeros > replacement.length() ? numberOfZeros-replacement.length() : 0;
+		if(numberOfZeros != 0)
+			replacement = String.format("%0" + numberOfZeros + "d%s", 0, replacement);
 		for (char k : replacements.keySet()) {
 			replacement = replacement.replace(k, replacements.get(k));
 		}
-
 		System.out.println(format_string.replace(matcher.group(0), replacement));
 	}
 	public static void main(String[] args) throws IOException {
