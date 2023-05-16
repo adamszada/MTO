@@ -12,6 +12,7 @@ class lab8 {
 		put('d', 'j');
 		put('e', 'k');
 		put('f', 'l');
+		put('0', 'o');
 	}};
 
 	public static void my_printf(String format_string, String param){
