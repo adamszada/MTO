@@ -1,0 +1,21 @@
+Prosty #k jest pierwszy
+test
+Prosty #k jest drugi ale oczekuje malych
+TEST2
+Trzeci #k jest trzeci i jest mixem
+tEsT3
+Mam spacje wiec # k nie robi nic
+test4
+Nie mam nic i nie robie nic
+test5
+Test6 ##k i podwojny hash
+test6
+Test numer k bez hasha
+test7
+Osmy test jest pusty
+test8
+Dziewiec i podwojny k #kk
+test9
+Dziesiaty test pusty
+test10
+
