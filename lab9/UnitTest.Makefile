@@ -64,10 +64,11 @@ endef
 	
 	# perform_test,INPUT_FILE_NAME_WOUT_EXTENSION,TEST_NAME
 	
-	$(call perform_test,noparam,"No param")
-	$(call perform_test,short,Short)
-	$(call perform_test,long,Long)
-	$(call perform_test,bad,Bad)
+	$(call perform_test,invalid,invalid)
+	$(call perform_test,inputInRange10000,"Numbers within 10000 range")
+	$(call perform_test,unboundedInput,unboundedNumbers)
+	$(call perform_test,floatingPointInput,floatingPointInput)
+	$(call perform_test,valid,valid)
 
 	$(call restore_data)
 
@@ -76,10 +77,12 @@ generate:
 
 	# generate_output,INPUT_FILE_NAME_WOUT_EXTENSION
 	
-	$(call generate_answers,noparam)
-	$(call generate_answers,short)
-	$(call generate_answers,long)
-	$(call generate_answers,bad)
+	$(call generate_answers,invalid)
+	$(call generate_answers,inputInRange10000)
+	$(call generate_answers,unboundedInput)
+	$(call generate_answers,floatingPointInput)
+	$(call generate_answers,valid)
+
 
 	$(call restore_data)
 
@@ -87,7 +90,8 @@ merge:
 	-rm ./input.txt 2>/dev/null
 	-rm ./answers.txt 2>/dev/null
 
-	$(call merge_test,noparam)
-	$(call merge_test,short)
-	$(call merge_test,long)
-	$(call merge_test,bad)
+	$(call merge_test,invalid)
+	$(call merge_test,inputInRange10000)
+	$(call merge_test,unboundedInput)
+	$(call merge_test,floatingPointInput)
+	$(call merge_test,valid)
