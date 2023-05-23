@@ -1,0 +1,6 @@
+Prosty #k jest pierwszy
+test
+Test6 ##k i podwojny hash
+test6
+Dziewiec i podwojny k #kk
+test9

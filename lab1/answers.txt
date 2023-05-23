@@ -1,10 +1,10 @@
-Prosty TEST jest pierwszy
-Prosty test2 jest drugi ale oczekuje malych
-Trzeci TeSt3 jest trzeci i jest mixem
 Mam spacje wiec # k nie robi nic
 Nie mam nic i nie robie nic
-Test6 #TEST6 i podwojny hash
 Test numer k bez hasha
 Osmy test jest pusty
-Dziewiec i podwojny k TEST9k
 Dziesiaty test pusty
+Trzeci TeSt3 jest trzeci i jest mixem
+Prosty TEST jest pierwszy
+Test6 #TEST6 i podwojny hash
+Dziewiec i podwojny k TEST9k
+Prosty test2 jest drugi ale oczekuje malych

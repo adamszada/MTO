@@ -1,0 +1,3 @@
+Prosty TEST jest pierwszy
+Test6 #TEST6 i podwojny hash
+Dziewiec i podwojny k TEST9k

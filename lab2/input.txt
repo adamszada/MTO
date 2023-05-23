@@ -1,15 +1,3 @@
-Ala ma #k
-kota
-Ala ma #k
-KOTA
-Ala ma #k
-kOtA
-Ala ma # k
-kota
-Ala ma #.1k
-kota
-Ala ma #.44k
-kotka
 Ala ma kota
 kota
 Ala k# kota
@@ -18,3 +6,15 @@ Ala #3.k kota
 ma
 Ala ma #w
 kota
+Ala ma # k
+kota
+Ala ma #k
+kOtA
+Ala ma #k
+kota
+Ala ma #.1k
+kota
+Ala ma #.44k
+kotka
+Ala ma #k
+KOTA
