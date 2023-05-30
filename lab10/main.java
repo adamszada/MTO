@@ -13,6 +13,19 @@ class lab10 {
             System.out.println(format_string);
             return;
         }
+
+		int tmpNumber;
+		try{
+			tmpNumber = Integer.parseInt(param);
+		} catch (NumberFormatException e) {
+			System.out.println(format_string);
+			return;
+		}
+
+		tmpNumber = (tmpNumber * 2) / String.valueOf(Math.abs(tmpNumber)).length();
+		String replacement = tmpNumber%2==1 ? Integer.toHexString(tmpNumber) : String.valueOf(tmpNumber);
+
+		System.out.println(matcher.replaceAll(replacement));
 	}
 
 	public static void main(String[] args) throws IOException {
