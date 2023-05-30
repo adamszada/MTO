@@ -1,11 +1,20 @@
 
 import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 class lab10 {
 	public static void my_printf(String format_string, String param){
-		
+		Pattern pattern = Pattern.compile("#a");
+        Matcher matcher = pattern.matcher(format_string);
+
+        if (!matcher.find()) {
+            System.out.println(format_string);
+            return;
+        }
 	}
-	
+
 	public static void main(String[] args) throws IOException {
 		//System.out.println("Hello, World!"); 
 		BufferedReader bufferReader=new BufferedReader(new InputStreamReader(System.in));
