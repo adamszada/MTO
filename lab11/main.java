@@ -4,6 +4,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 class lab11 {
+	static String replacements =  "abcdefghij";
+
 	public static void my_printf(String format_string, String param){
 		Pattern pattern = Pattern.compile("#b");
 		Matcher matcher = pattern.matcher(format_string);
@@ -19,8 +21,20 @@ class lab11 {
 			System.out.println(format_string);
 			return;
 		}
-
+	
 		String replacement = Integer.toBinaryString(tmpNumber);
+		StringBuilder replaceStringBuilder = new StringBuilder();
+
+		for (int i = 0; i < replacement.length(); i++) {
+			char num = replacement.charAt(replacement.length() - 1 - i);
+			if (num == '0') {
+				replaceStringBuilder.append('0');
+			} else {
+				replaceStringBuilder.append(replacements.charAt(i % 10));
+			}
+		}
+
+		replacement = replaceStringBuilder.reverse().toString();
 		System.out.println(format_string.replace(matcher.group(0), replacement));
 
 	}
