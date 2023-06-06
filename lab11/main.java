@@ -11,6 +11,18 @@ class lab11 {
 			System.out.println(format_string);
 			return;
 		}
+
+		int tmpNumber  = 0;
+		try {
+			tmpNumber  = Integer.parseInt(param);
+		} catch (NumberFormatException e) {
+			System.out.println(format_string);
+			return;
+		}
+
+		String replacement = Integer.toBinaryString(tmpNumber);
+		System.out.println(format_string.replace(matcher.group(0), replacement));
+
 	}
 
 	public static void main(String[] args) throws IOException {
